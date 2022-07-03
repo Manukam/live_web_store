@@ -19,6 +19,7 @@ defmodule LiveWebStoreWeb.Router do
 
     live "/products", ShopLive, :index
     resources "/products", ProductController
+    get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
