@@ -4,6 +4,7 @@ defmodule LiveWebStore.Features.Features do
   alias LiveWebStore.Repo
   alias LiveWebStore.Products
 
+#Not used
 
   def list_products(params) do
     search_term = get_in(params, ["query"])

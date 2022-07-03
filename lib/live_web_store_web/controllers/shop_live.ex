@@ -25,7 +25,7 @@ defmodule LiveWebStoreWeb.ShopLive do
     |> assign(:products, Products.list_products(query))
   end
 
-  def render_products(assigns) do
+  def render_products(assigns) do  #Can do some optimization here, no need to fetch products in first load. Can remove the if
     ~L"""
     <ul id="myUL">
     <%= if !is_nil(@query) && String.length(@query) > 0 do %>
