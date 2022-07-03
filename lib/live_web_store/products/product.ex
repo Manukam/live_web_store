@@ -15,7 +15,8 @@ defmodule LiveWebStore.Products.Product do
   @doc false
   def changeset(product, attrs) do
     product
-    |> cast(attrs, [:sku, :units_sold, :unit_price, :title, :average_discount])
-    |> validate_required([:sku, :units_sold, :unit_price, :title, :average_discount])
+    |> cast(attrs, [:id, :sku, :units_sold, :unit_price, :title, :average_discount])
+    |> validate_required([:id, :sku, :units_sold, :unit_price, :title, :average_discount])
+    |> unique_constraint(:sku)
   end
 end

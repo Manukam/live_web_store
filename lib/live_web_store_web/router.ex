@@ -17,7 +17,8 @@ defmodule LiveWebStoreWeb.Router do
   scope "/", LiveWebStoreWeb do
     pipe_through :browser
 
-    live "/", ShopLive, :index
+    live "/products", ShopLive, :index
+    resources "/products", ProductController
   end
 
   # Other scopes may use custom stacks.

@@ -35,7 +35,7 @@ defmodule LiveWebStore.Products do
       ** (Ecto.NoResultsError)
 
   """
-  def get_product!(id), do: Repo.get!(Product, id)
+  def get_product!(id), do: Repo.get!(Produc, id)
 
   @doc """
   Creates a product.
@@ -101,4 +101,26 @@ defmodule LiveWebStore.Products do
   def change_product(%Product{} = product, attrs \\ %{}) do
     Product.changeset(product, attrs)
   end
+
+  def list_products(search_term) do
+    wildcard_search = "%#{search_term}%"
+
+    from(u in Product,
+      where: like(u.title, ^wildcard_search),
+      select: %{title: u.title, sku: u.sku}
+    )
+    |> Repo.all()
+  end
+
+  def get_product_by_sku(sku) do
+    Product
+    |> where(sku: ^sku)
+    |> Repo.one()
+  end
+
+  # def get_by_sku(sku) do
+    # Repo.get!(from(u in Product, where: [u.sku, ^sku]))
+    # Repo.all from(u in Product, select: [:id, :name])
+    # Product |> where(sku: current_user.id) |> Repo.all()
+  # end
 end

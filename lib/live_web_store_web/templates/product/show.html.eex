@@ -1,0 +1,23 @@
+<h1>Product Details</h1>
+
+<div id = "rcorners2">
+    <div id ="title_div">
+    <strong><%= @product.title %></strong>
+    </div>
+<ul>
+
+  <li>
+    <strong>Units Sold:</strong>
+    <%= @product.units_sold %>
+  </li>
+
+  <li>
+    <strong>Unit Price:</strong>
+    $<%= @product.unit_price %>
+  </li>
+
+</ul>
+
+</div>
+
+<span><%= link "Back", to: Routes.product_path(@conn, :index) %></span>

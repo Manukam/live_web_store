@@ -3,9 +3,4 @@
   <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
   <%= @inner_content %>
 
-  <%= form_for @conn, movie_path(@conn, :index), [method: :get, class: "pull-right"], fn f -> %>
-      <%= search_input f, :query %>
-      <%= submit "Search" %>
-    <% end %>
-
 </main>
