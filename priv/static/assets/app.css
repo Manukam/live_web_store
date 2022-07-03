@@ -406,7 +406,7 @@ input[type=radio] {
   }
 }
 a {
-  color: #0069d9;
+  color: #000000;
   text-decoration: none;
 }
 a:focus,
@@ -509,6 +509,7 @@ h6 {
 h1 {
   font-size: 4.6rem;
   line-height: 1.2;
+  font-family: revert;
 }
 h2 {
   font-size: 3.6rem;
@@ -535,8 +536,8 @@ h6 {
 }
 img {
   max-width: 80%;
-  max-height:105px;
-  margin: 0 auto;
+  max-height:130px;
+  margin: 15px auto;
 
 }
 .clearfix:after {
@@ -618,9 +619,10 @@ select {
 }
 header {
   width: 100%;
-  background: #fdfdfd;
-  border-bottom: 1px solid #eaeaea;
+  /* background: #fdfdfd; */
+  /* border-bottom: 1px solid #eaeaea; */
   margin-bottom: 2rem;
+  padding-top: 160px;
 }
 header section {
   align-items: center;
@@ -750,17 +752,24 @@ header nav a {
   animation: 0.2s ease-out 0s normal forwards 1 fade-out-keys;
 }
 
+
+
 #search_query {
   background-image: url('/images/search.png'); /* Add a search icon to input */
-  background-position: 10px 15px; /* Position the search icon */
+  background-position: 10px 19px; /* Position the search icon */
   background-repeat: no-repeat; /* Do not repeat the icon image */
   background-size:25px;
+  border: none;
+  border-radius: 3em;
+  box-shadow: 0px 7px 9px 0px #e1752833;
+  color: #555555;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  outline: none;
+  padding: 0.8em 2em;
+  padding: 12px 20px 12px 40px;
   width: 100%; /* Full-width */
   height: 60px;
-  font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
-  margin-bottom: 12px; /* Add some space below the input */
 }
 
 #myUL {
@@ -771,18 +780,19 @@ header nav a {
 }
 
 #myUL li a {
-  border: 1px solid #f0b5b5; /* Add a border to all links */
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6; /* Grey background color */
-  padding: 12px; /* Add some padding */
-  text-decoration: none; /* Remove default text underline */
-  font-size: 18px; /* Increase the font-size */
-  color: black; /* Add a black text color */
-  display: block; /* Make it into a block element to fill the whole list */
+  border: 1px solid #f0b5b5;
+  margin-top: -1px; 
+  background-color: #f6f6f6; 
+  padding: 12px; 
+  text-decoration: none;
+  font-size: 18px; 
+  color: black; 
+  display: block; 
+  border-radius: 15px
 }
 
 #myUL li a:hover:not(.header) {
-  background-color: #eee; /* Add a hover effect to all links, except for headers */
+  background-color: #eee; 
 }
 
 #rcorners2 {
@@ -800,8 +810,9 @@ header nav a {
 
 .previous {
   background-color: #f1f1f1;
-  color: black;
+  color: rgb(0, 0, 0);
   margin-top: 15px;
+  border-radius: 16px;
 }
 
 span {
