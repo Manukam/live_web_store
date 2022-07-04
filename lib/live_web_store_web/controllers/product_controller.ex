@@ -9,6 +9,6 @@ defmodule LiveWebStoreWeb.ProductController do
 
   def show(conn, %{"id" => sku}) do
     product = Products.get_product_by_sku(sku)
-    render(conn, "show.html", product: product)
+    render(conn, "show.product.html", product: product)
   end
 end
